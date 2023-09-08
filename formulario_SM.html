@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+<script>
+    function mostrarDatos(){
+		vnombre = document.getElementById("nombre").value;
+		vapellido = document.getElementById("apellido").value;
+		vdni = document.getElementById("dni").value;
+        vfechaNacimiento = document.getElementById("fechaNacimiento").value;
+		vdomicilio = document.getElementById("domicilio").value;
+		vlocalidad = document.getElementById("localidad").value;
+
+		vnivelespañol = document.getElementById("nivelespañol").value;
+		vnivelingles = document.getElementById("nivelingles").value;
+		vnivelfrances = document.getElementById("nivelfrances").value;
+        vnivelchino = document.getElementById("nivelchino").value;
+			
+			
+        document.write("<strong>Los datos ingresados fueron: </strong><br/>");
+        document.write("Nombre: "+vnombre+"<br/>");
+		document.write("Apellido: "+vapellido+"<br/>");
+		document.write("DNI: "+vdni+"<br/>");
+		document.write("Domicilio: "+vdomicilio+"<br/>");
+		document.write("Localidad: "+vlocalidad+"<br/>");
+		document.write("Fecha de nacimiento: "+vfechaNacimiento+"<br/>");
+		document.write("Nivel de Español: "+vnivelespañol+"<br/>");
+		document.write("Nivel de Ingles: "+vnivelingles+"<br/>");
+        document.write("Nivel de Frances: "+vnivelfrances+"<br/>");
+        document.write("Nivel de Chino: "+vnivelchino+"<br/>");
+
+        document.write("<br/><strong>Gracias por sus datos</strong>");
+
+    }
+</script>
+</head>
+
+<body>
+    <h2>~ FORMULARIO ~</h2>
+
+    <form action=""method="post">
+        <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+            <p></p>
+        <label for="dni">Nro DNI:</label>
+            <input type="number" id="dni">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento">   
+            <p></p> 
+        <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio">
+        <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad">
+            <p></p>
+
+        <h3>Idiomas que conoce</h3>
+        <input type="checkbox" value="español" id="español">
+        <label for="español"> Español </label>
+        <label for=""> // Nivel </label>
+            <input type="range" id="nivelespañol">
+        <p></p>
+
+        <input type="checkbox" value="ingles" id="ingles">
+        <label for="ingles"> Inglés </label>
+        <label for=""> // Nivel </label>
+            <input type="range" id="nivelingles">
+        <p></p>
+
+        <input type="checkbox" value="frances" id="frances">
+        <label for="frances"> Francés </label>
+        <label for=""> // Nivel </label>
+            <input type="range" id="nivelfrances">
+        <p></p>
+
+        <input type="checkbox" value="chino" id="chino">
+        <label for="chino"> Chino </label>
+        <label for=""> // Nivel </label>
+            <input type="range" id="nivelchino">
+        <p></p>
+
+        <button type="submit" onClick="mostrarDatos()">Enviar y Mostrar</button>
+        <button type="reset">Borrar</button>
+		
+
+    </form>   
+</body>
+</html>
